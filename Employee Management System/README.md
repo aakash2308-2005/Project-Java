@@ -1,43 +1,25 @@
 # Employee Management System
 
-A console-based Employee Management System built using Java to practice Object-Oriented Programming, inheritance, polymorphism, enums, collections, and `BigDecimal`-based salary calculations.
+A console-based Employee Management System built with **Core Java** to demonstrate practical Object-Oriented Programming, inheritance, polymorphism, enums, collections, and financial calculations using `BigDecimal`.
 
-## Features
+The project simulates a basic employee management platform where employees can be created, searched, updated, removed, grouped by department, and analyzed through payroll statistics.
 
-1. Add Employee
-2. View All Employees
-3. Search Employee
-   - Search by Employee ID
-   - Search by Employee Name
-4. Update Employee
-   - Name
-   - Age
-   - Email
-   - Department
-5. Remove Employee
-6. View Employees by Department
-7. View Employee Statistics
-8. Exit
+---
 
-## Employee Types
+## 🚀 Features
 
-The system supports three types of employees:
+### Employee Management
+- Add new employees
+- View all employees
+- Search employees by:
+  - Employee ID
+  - Employee name
+- Update employee information
+- Remove employees
+- Prevent duplicate employee IDs
 
-- Full-Time Employee
-  - Basic Salary
-  - Allowances/Benefits
-- Part-Time Employee
-  - Hourly Rate
-  - Number of Hours
-- Intern
-  - Stipend
-  - Duration
-
-Each employee type has its own salary calculation.
-
-## Departments
-
-Employees can belong to:
+### Department Management
+Employees can be assigned to:
 
 - Engineering
 - HR
@@ -45,109 +27,53 @@ Employees can belong to:
 - Marketing
 - Operations
 
-Departments are represented using Java `enum`.
+The system can display employees grouped by department.
 
-## Concepts Practiced
+### Employee Types
 
-- Classes and Objects
-- Encapsulation
-- Inheritance
-- Polymorphism
-- Method Overriding
-- Constructors
-- Getters and Setters
-- Enums
-- Interfaces / Abstract Classes
-- `ArrayList`
-- `HashSet`
-- `Scanner`
-- `BigDecimal`
-- Loops and Conditional Statements
-- Switch Statements
-- Searching and Removing from Collections
-- Basic CRUD Operations
+The system supports three different employee categories:
 
-## Data Structures Used
+#### Full-Time Employee
+- Basic salary
+- Allowances / benefits
+- Total compensation calculation
 
-### ArrayList
+#### Part-Time Employee
+- Hourly rate
+- Number of working hours
+- Total compensation calculation
 
-An `ArrayList<Employee>` is used to store all employees.
+#### Intern
+- Stipend
+- Internship duration
+- Total compensation calculation
 
-### HashSet
+### Payroll Statistics
 
-A `HashSet<String>` is used to maintain unique employee IDs and prevent duplicate employees from being added.
+The application calculates:
 
-## Salary Handling
-
-`BigDecimal` is used for salary and monetary calculations instead of `double` to avoid floating-point precision problems.
-
-The system calculates:
-
-- Individual employee compensation
+- Total number of employees by type
 - Total payroll
 - Full-time payroll
 - Part-time payroll
 - Intern payroll
 - Average payroll for each employee type
 
-## Project Structure
+---
 
+## 🏗️ Project Structure
+
+```text
 Employee Management System
 │
 ├── Main.java
+│
 ├── Handler.java
+│
 ├── Employee.java
 ├── FullTimeEmployee.java
 ├── PartTimeEmployee.java
 ├── Intern.java
+│
 ├── EmployeeType.java
 └── Departments.java
-How to Run
-
-Compile all Java files:
-
-javac *.java
-
-Run the application:
-
-java Main
-Example
-================================
-EMPLOYEE MANAGEMENT SYSTEM
-================================
-1. Add Employee
-2. View All Employees
-3. Search Employee
-4. Update Employee
-5. Remove Employee
-6. View Department Employees
-7. View Employee Statistics
-8. Exit
-Validation Implemented
-Prevents duplicate employee IDs
-Validates employee departments
-Validates employee types
-Prevents operations on non-existent employees
-Handles empty employee collections
-Maintains employee IDs after removal
-Learning Outcome
-
-This project demonstrates the fundamentals of designing a small Java application using OOP principles and collection frameworks. It also provides practical experience with polymorphic employee types, enum-based classification, CRUD operations, and financial calculations using BigDecimal.
-
-Future Improvements
-
-Possible improvements for a larger version:
-
-Stronger input validation
-Exception handling for invalid numeric input
-File/database persistence
-Authentication and authorization
-Separate service and repository layers
-REST API using Spring Boot
-Database integration using JPA/Hibernate
-Unit testing with JUnit
-Status
-
-Completed
-
-This project serves as a foundation for progressing from core Java and OOP concepts toward backend development with Spring Boot.
