@@ -1,0 +1,8 @@
+public enum Specialization{
+    CARDIOLOGIST,
+    NEUROLOGIST,
+    ORTHOPEDIC, 
+    PEDIATRICIAN,
+    GENERAL_PHYSICIAN, 
+    DERMATOLOGIST
+}
