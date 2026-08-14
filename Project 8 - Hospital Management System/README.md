@@ -1,72 +1,107 @@
-# 🏥 Hospital Patient Management System
+# Hospital Patient Management System
 
-A console-based **Hospital Patient Management System built in Java** using Object-Oriented Programming principles.
+A Java console-based Hospital Patient Management System designed to practice **Object-Oriented Programming, Collections, Enums, Date/Time API, and basic entity management**.
 
-The application manages patients, doctors, appointments, admissions, discharges, doctor availability, and hospital statistics through a simple menu-driven interface.
+## Features
 
-This project was built to strengthen practical Java OOP concepts such as **classes, objects, encapsulation, enums, collections, object relationships, constructors, and service-oriented program structure**.
+1. **Patient Registration**
+   - Register patients with ID, name, age, gender, phone, address, and blood group.
+   - Prevent duplicate patient IDs.
 
----
+2. **Doctor Registration**
+   - Register doctors with ID, name, specialization, phone number, and experience.
+   - Supports multiple medical specializations.
+   - Prevent duplicate doctor IDs.
 
-## 📌 Features
+3. **View Records**
+   - View all registered patients.
+   - View all registered doctors.
+   - Display complete patient and doctor information.
 
-### 👤 Patient Management
+4. **Search**
+   - Search patients by name or ID.
+   - Search doctors by specialization or ID.
 
-- Register new patients
-- Prevent duplicate patient IDs
-- Store patient information:
-  - Patient ID
-  - Name
-  - Age
-  - Gender
-  - Phone Number
-  - Address
-  - Blood Group
-- View all registered patients
-- Search patients by:
-  - Patient name
-  - Patient ID
-- View detailed information about a specific patient
-- Track patient status
+5. **Patient–Doctor Assignment**
+   - Assign an available doctor to a patient.
+   - Prevent assigning a second doctor to the same patient.
+   - Doctor status changes to `BUSY` after assignment.
 
-### 👨‍⚕️ Doctor Management
+6. **Appointment Management**
+   - Book appointments using patient ID, doctor ID, appointment ID, date, and time.
+   - Prevent duplicate appointment IDs.
+   - Only available doctors can be booked.
+   - Appointment date uses `dd-MM-yyyy`.
+   - Appointment time uses `HH:mm`.
+   - Appointment statuses: `SCHEDULED`, `COMPLETED`, `CANCELLED`.
 
-- Register new doctors
-- Prevent duplicate doctor IDs
-- Store doctor information:
-  - Doctor ID
-  - Doctor name
-  - Specialization
-  - Phone number
-  - Experience
-  - Availability status
-- View all registered doctors
-- Search doctors by:
-  - Specialization
-  - Doctor ID
-- Track doctor availability
+7. **Patient Admission**
+   - Admit registered patients.
+   - Prevent admitting an already admitted patient.
+   - Discharge patients only after admission.
+   - Track patient status as `OUTPATIENT`, `ADMITTED`, or `DISCHARGED`.
 
-### 🏥 Patient–Doctor Assignment
+8. **Appointment Completion / Cancellation**
+   - Complete scheduled appointments.
+   - Cancel scheduled appointments.
+   - Prevent modifying completed or cancelled appointments.
+   - Doctor becomes `AVAILABLE` after appointment completion or cancellation.
 
-- Assign a patient to an available doctor
-- Prevent assigning another doctor when a patient already has an assigned doctor
-- Store the assigned doctor inside the patient object
-- Store assignment information
-- Update doctor availability when a doctor is assigned
+9. **Patient Details**
+   - View complete details of an individual patient.
+   - Displays assigned doctor and admission information.
 
-### 📅 Appointment Management
+10. **Hospital Statistics**
+    - Displays total patients.
+    - Displays admitted, discharged, and outpatient counts.
+    - Displays total, available, busy, and off-duty doctors.
+    - Displays total, scheduled, completed, and cancelled appointments.
 
-- Book appointments for registered patients and doctors
-- Generate appointments using a unique appointment ID
-- Prevent duplicate appointment IDs
-- Store:
-  - Appointment ID
-  - Patient
-  - Doctor
-  - Appointment date
-  - Appointment time
-  - Appointment status
-- Accept appointment dates in:
+## OOP Concepts Used
 
-```text
-dd-MM-yyyy
+- Classes and Objects
+- Encapsulation
+- Constructors
+- Getters and Setters
+- Enums
+- Object Relationships
+- Composition / Association
+- Method-based service organization
+
+## Java Concepts Used
+
+- `ArrayList`
+- `HashSet`
+- `Scanner`
+- `LocalDate`
+- `LocalTime`
+- `DateTimeFormatter`
+- Enhanced `for` loops
+- Conditional logic
+- Collections for ID tracking
+
+## Main Entities
+
+- `Patient`
+- `Doctor`
+- `Appointment`
+- `Handler`
+- `Main`
+
+## Enums
+
+- `PatientStatus`
+- `DoctorStatus`
+- `AppointmentStatus`
+- `Specialization`
+
+## Data Management
+
+`ArrayList` is used to maintain patients, doctors, and appointments, while `HashSet` is used to efficiently track unique patient, doctor, and appointment IDs.
+
+## Running the Project
+
+Compile all Java files:
+
+```bash
+javac *.java
